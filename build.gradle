@@ -1,0 +1,27 @@
+buildscript {
+    repositories { jcenter() }
+    dependencies { classpath 'com.netflix.nebula:nebula-plugin-plugin:1.12.9' }
+}
+
+description 'Template for NetflixOSS projects'
+apply plugin: 'nebula-plugin'
+
+contacts {
+    'rob.spieldenner@gmail.com' {
+        moniker 'Rob Spieldenner'
+        github 'rspieldenner'
+    }
+    'justin@halfempty.org' {
+        moniker 'Justin Ryan'
+        github 'quidryan'
+    }
+}
+
+dependencies {
+    compile 'com.netflix.nebula:nebula-project-plugin:1.12.+'
+    compile 'com.netflix.nebula:nebula-bintray-plugin:1.12.+'
+    compile 'com.netflix.nebula:nebula-publishing-plugin:1.12.+'
+    compile 'nl.javadude.gradle.plugins:license-gradle-plugin:0.+'
+    compile 'org.ajoberstar:gradle-git:0.9.0'
+    testCompile 'com.netflix.nebula:nebula-test:1.12.+'
+}
