@@ -33,8 +33,8 @@ class NetflixOssProjectPluginSpec extends PluginProjectSpec {
         project.plugins.apply(JavaPlugin)
 
         then:
-        project.sourceCompatibility == JavaVersion.VERSION_1_6
-        project.targetCompatibility == JavaVersion.VERSION_1_6
+        project.sourceCompatibility == JavaVersion.VERSION_1_7
+        project.targetCompatibility == JavaVersion.VERSION_1_7
     }
 
     def 'plugin allows changing java version'() {
@@ -42,12 +42,12 @@ class NetflixOssProjectPluginSpec extends PluginProjectSpec {
         project.plugins.apply(JavaPlugin)
 
         when:
-        project.sourceCompatibility = '1.7'
-        project.targetCompatibility = '1.7'
+        project.sourceCompatibility = '1.6'
+        project.targetCompatibility = '1.6'
 
         then:
-        project.sourceCompatibility == JavaVersion.VERSION_1_7
-        project.targetCompatibility == JavaVersion.VERSION_1_7
+        project.sourceCompatibility == JavaVersion.VERSION_1_6
+        project.targetCompatibility == JavaVersion.VERSION_1_6
     }
 
 
