@@ -1,6 +1,6 @@
 buildscript {
     repositories { jcenter() }
-    dependencies { classpath 'com.netflix.nebula:nebula-plugin-plugin:1.12.9' }
+    dependencies { classpath 'com.netflix.nebula:nebula-plugin-plugin:2.0.0' }
 }
 
 description 'Template for NetflixOSS projects'
@@ -17,12 +17,14 @@ contacts {
     }
 }
 
+def pluginGradleVersion = '2.0'
+
 dependencies {
-    compile 'com.netflix.nebula:nebula-core:1.12.+'
-    compile 'com.netflix.nebula:nebula-project-plugin:1.12.+'
-    compile 'com.netflix.nebula:nebula-bintray-plugin:1.12.+'
-    compile 'com.netflix.nebula:nebula-publishing-plugin:1.12.+'
+    compile "com.netflix.nebula:nebula-core:${pluginGradleVersion}.+"
+    compile "com.netflix.nebula:nebula-project-plugin:${pluginGradleVersion}.+"
+    compile "com.netflix.nebula:nebula-bintray-plugin:${pluginGradleVersion}.+"
+    compile "com.netflix.nebula:nebula-publishing-plugin:${pluginGradleVersion}.+"
     compile 'nl.javadude.gradle.plugins:license-gradle-plugin:0.+'
     compile 'org.ajoberstar:gradle-git:0.9.0'
-    testCompile 'com.netflix.nebula:nebula-test:1.12.+'
+    testCompile "com.netflix.nebula:nebula-test:${pluginGradleVersion}.+"
 }
